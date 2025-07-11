@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--using the property and value tag to inject the dependecy throughh setter -->
+    <bean class="com.ramesh.Student" name="student1">
+        <property name="id">
+            <value>1</value>
+        </property>
+        <property name="name">
+            <value>Ramesh g</value>
+        </property>
+        <property name="address">
+            <value>Kathmandu</value>
+        </property>
+
+    </bean>
+<!--    using the values attribute in property tag-->
+    <bean class="com.ramesh.Student" name="student3">
+        <property name="id" value="3"/>
+        <property name="name" value="Surendra Bk"/>
+        <property name="address" value="Lalitpur"/>
+    </bean>
+<!--    using the p schema to inject dependency through setters-->
+    <bean class="com.ramesh.Student" name="student2" p:name="Abin Saud " p:id="2" p:address="Doti"/>
+</beans>
+

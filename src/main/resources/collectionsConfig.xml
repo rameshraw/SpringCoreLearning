@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class="com.ramesh.collections.Employee" name="employee1">
+        <property name="name" value="Ramesh k"/>
+        <property name="phones">
+            <list>
+             <value>9814634310</value>
+             <value>9865665519</value>
+             <value>9868717228</value>
+
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>Shankamul</value>
+                <value>Chabahill</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="Programming" value="Java"/>
+                <entry key="QA" value="Selenium"/>
+                <entry key="Frontend" value="React JS"/>
+            </map>
+        </property>
+    </bean>
+</beans>
+
